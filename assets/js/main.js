@@ -116,3 +116,33 @@ document.querySelectorAll('canvas.network').forEach(canvas => {
     }).observe(canvas);
   }
 });
+
+// Gallery lightbox
+const lb = document.querySelector('.lightbox');
+const shots = [...document.querySelectorAll('.gallery a')];
+if (lb && shots.length && typeof lb.showModal === 'function') {
+  const img = lb.querySelector('img');
+  let cur = 0;
+  const show = i => {
+    cur = (i + shots.length) % shots.length;
+    img.src = shots[cur].href;
+    img.alt = shots[cur].querySelector('img').alt;
+  };
+  shots.forEach((a, i) => a.addEventListener('click', e => { e.preventDefault(); show(i); lb.showModal(); }));
+  lb.querySelector('.lb-close').addEventListener('click', () => lb.close());
+  lb.querySelector('.lb-prev').addEventListener('click', () => show(cur - 1));
+  lb.querySelector('.lb-next').addEventListener('click', () => show(cur + 1));
+  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  lb.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    if (e.key === 'ArrowRight') show(cur + 1);
+  });
+  let x0 = null;
+  lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) show(cur + (dx < 0 ? 1 : -1));
+    x0 = null;
+  });
+}
