@@ -122,17 +122,29 @@ const lb = document.querySelector('.lightbox');
 const shots = [...document.querySelectorAll('.gallery a')];
 if (lb && shots.length && typeof lb.showModal === 'function') {
   const img = lb.querySelector('img');
+  const count = lb.querySelector('.lb-count');
   let cur = 0;
   const show = i => {
     cur = (i + shots.length) % shots.length;
     img.src = shots[cur].href;
     img.alt = shots[cur].querySelector('img').alt;
+    count.textContent = `${cur + 1} / ${shots.length}`;
   };
-  shots.forEach((a, i) => a.addEventListener('click', e => { e.preventDefault(); show(i); lb.showModal(); }));
-  lb.querySelector('.lb-close').addEventListener('click', () => lb.close());
+  // Il tasto "indietro" del browser/telefono chiude la foto invece di lasciare la pagina
+  const open = i => {
+    show(i);
+    lb.showModal();
+    history.pushState({ lightbox: true }, '');
+  };
+  const close = () => { if (lb.open) history.back(); };
+  window.addEventListener('popstate', () => { if (lb.open) lb.close(); });
+  lb.addEventListener('cancel', e => { e.preventDefault(); close(); }); // Esc
+
+  shots.forEach((a, i) => a.addEventListener('click', e => { e.preventDefault(); open(i); }));
+  lb.querySelector('.lb-close').addEventListener('click', close);
   lb.querySelector('.lb-prev').addEventListener('click', () => show(cur - 1));
   lb.querySelector('.lb-next').addEventListener('click', () => show(cur + 1));
-  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
   lb.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft') show(cur - 1);
     if (e.key === 'ArrowRight') show(cur + 1);
