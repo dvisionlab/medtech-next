@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MedTech Next — La conferenza su tecnologia e innovazione medicale</title>
-  <meta name="description" content="MedTech Next è la conferenza organizzata da D/Vision Lab e NRG dedicata a chi costruisce il futuro delle tecnologie medicali. Seconda edizione nel 2027.">
+  <title>MedTech Next — Tech conference per il futuro del medtech</title>
+  <meta name="description" content="MedTech Next è la tech conference di D/Vision Lab e NRG per chi guida progetti digitali complessi nei dispositivi medici. Seconda edizione nel 2027.">
+  <meta name="theme-color" content="#0b1622">
   <meta property="og:title" content="MedTech Next">
-  <meta property="og:description" content="La conferenza di D/Vision Lab e NRG per chi costruisce il futuro del medtech. Edizione 2027 in arrivo.">
+  <meta property="og:description" content="Due aziende, una visione condivisa per il futuro del medtech. La tech conference di D/Vision Lab e NRG: edizione 2027 in arrivo.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://medtechnext-conf.dvisionlab.com/">
-  <!-- TODO: aggiungere og:image (1200x630) in assets/img/og-image.png -->
+  <!-- TODO: og:image dedicata 1200x630 in assets/img/og-image.png -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
   <!-- ===================== HEADER ===================== -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="brand">MedTech<span>Next</span></a>
+      <a href="#top" class="brand">MEDTECH <span>NEXT</span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Apri menu">
         <span></span><span></span><span></span>
       </button>
@@ -36,55 +37,75 @@
 
   <main id="top">
 
-    <!-- ===================== HERO ===================== -->
+    <!-- ===================== HERO (stile locandina: pannello blu + pannello scuro) ===================== -->
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Seconda edizione · 2027</p>
-        <h1>Il futuro del medtech<br>si costruisce insieme.</h1>
-        <p class="lead">
-          MedTech Next è l'evento di <strong>D/Vision Lab</strong> e <strong>NRG</strong>
-          per chi guida progetti digitali complessi nei dispositivi medici: industria, ricerca
-          e tecnologia allo stesso tavolo.
-        </p>
-        <div class="hero-cta">
-          <a href="#contatti" class="btn">Avvisami per il 2027</a>
-          <a href="#edizioni" class="btn btn-ghost">Rivivi l'edizione 2026</a>
-        </div>
-        <div class="announce">
-          <span class="pulse" aria-hidden="true"></span>
-          Data e location dell'edizione 2027 saranno annunciate a breve.
+      <div class="hero-bg" aria-hidden="true"><canvas class="network"></canvas></div>
+
+      <p class="mono eyebrow hero-l">TECH CONFERENCE //</p>
+      <div class="hero-r side-block">
+        <p class="mono side-label">Partner organizzatori</p>
+        <div class="side-logos">
+          <img src="assets/img/loghi/nrg.png" alt="NRG — Your Partner in Custom Software" width="800" height="326">
+          <img src="assets/img/loghi/dvisionlab.png" alt="D/Vision Lab" width="556" height="389">
         </div>
       </div>
+
+      <h1 class="wordmark"><span class="hero-l">MEDTECH</span> <span class="hero-r grad">NEXT</span></h1>
+
+      <div class="hero-l hero-content">
+        <p class="year">2027</p>
+        <p class="claim">Due aziende, una visione condivisa per il futuro del medtech</p>
+        <div class="announce mono">
+          <span class="pulse" aria-hidden="true"></span>
+          Seconda edizione: data e location in arrivo
+        </div>
+        <div class="hero-cta">
+          <a href="#contatti" class="btn">Avvisami per il 2027</a>
+          <a href="#edizione-2026" class="btn btn-ghost" data-tab-link="2026">Rivivi il 2026</a>
+        </div>
+      </div>
+
+      <ul class="hero-r features">
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="7" width="26" height="34" rx="2"/><path d="M16 7v-2h12v2M15 18l5 4 6-7 6 5M15 30h10"/><circle cx="33" cy="33" r="6"/><path d="M37.5 37.5 43 43"/></svg>
+          <div><strong class="mono">Case study reali:</strong><span class="mono">Soluzioni AI-driven e UX-compliant su progetti medicali complessi.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="5"/><circle cx="10" cy="12" r="4"/><circle cx="38" cy="12" r="4"/><circle cx="10" cy="36" r="4"/><circle cx="38" cy="36" r="4"/><path d="M13 15l7 6M35 15l-7 6M13 33l7-6M35 33l-7-6M14 12h20M14 36h20"/></svg>
+          <div><strong class="mono">Networking di alto livello:</strong><span class="mono">CTO, R&amp;D e innovatori medtech.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24s8-12 20-12 20 12 20 12-8 12-20 12S4 24 4 24z"/><circle cx="24" cy="24" r="7"/><path d="M24 4v4M10 8l2 3M38 8l-2 3M24 40v4"/></svg>
+          <div><strong class="mono">Visione congiunta:</strong><span class="mono">Scenari futuri e strategie per R&amp;D e innovazione digitale.</span></div>
+        </li>
+      </ul>
     </section>
 
     <!-- ===================== ABOUT ===================== -->
     <section id="about" class="section">
       <div class="container">
-        <h2>Cos'è MedTech Next</h2>
+        <p class="mono kicker">// Cos'è</p>
+        <h2>Progetti complessi, <span class="grad">partner concreti</span></h2>
         <p class="section-lead">
-          Un pomeriggio di talk e networking costruito attorno a una domanda:
-          <em>come si realizzano soluzioni digitali davvero integrate, scalabili e conformi
-          nel medtech di oggi?</em> Con il contributo di industria, università e dell'ecosistema
-          Life Science lombardo.
+          Un pomeriggio di confronto tra industria, tecnologia e ricerca per chi guida progetti
+          digitali complessi nel settore dei dispositivi medici. Una domanda concreta al centro:
+          <em>come costruire soluzioni digitali realmente integrate, scalabili e conformi nel medtech di oggi?</em>
         </p>
         <div class="cards cards-3">
           <article class="card">
-            <div class="card-icon" aria-hidden="true">◎</div>
-            <h3>Per chi</h3>
+            <p class="mono card-tag">01 / Per chi</p>
             <p>CTO, R&amp;D manager, innovation lead, executive, responsabili prodotto e project manager coinvolti in digitalizzazione e re-ingegnerizzazione in aziende medtech, elettromedicali, pharma, biotech e healthtech.</p>
           </article>
           <article class="card">
-            <div class="card-icon" aria-hidden="true">◇</div>
-            <h3>Di cosa si parla</h3>
+            <p class="mono card-tag">02 / Di cosa si parla</p>
             <p>AI nei flussi diagnostici clinici, re-ingegnerizzazione guidata dal rischio (debito tecnico, cybersecurity, compliance), e cosa distingue un fornitore da un partner strategico.</p>
           </article>
           <article class="card">
-            <div class="card-icon" aria-hidden="true">△</div>
-            <h3>Perché</h3>
-            <p>Due aziende e una visione condivisa: creare connessioni concrete tra industria, ricerca e tecnologia per gestire la complessità dello sviluppo di soluzioni medicali.</p>
+            <p class="mono card-tag">03 / Perché</p>
+            <p>Creare connessioni concrete tra aziende, ricerca e tecnologia per gestire la complessità dello sviluppo di soluzioni medicali.</p>
           </article>
         </div>
-        <h4 class="subhead">Perché partecipare</h4>
+        <h3 class="subhead">Perché partecipare</h3>
         <ul class="checklist">
           <li>Ti confronti su problemi reali, non su scenari teorici</li>
           <li>Capisci come integrare AI, UX, architettura software e regolatorio in modo sostenibile</li>
@@ -97,6 +118,7 @@
     <!-- ===================== EDIZIONI (tab) ===================== -->
     <section id="edizioni" class="section section-alt">
       <div class="container">
+        <p class="mono kicker">// Edizioni</p>
         <h2>Edizioni</h2>
 
         <div class="tabs" role="tablist" aria-label="Edizioni MedTech Next">
@@ -108,20 +130,23 @@
         <div role="tabpanel" id="panel-2027" aria-labelledby="tab-2027" class="tab-panel">
           <div class="edition-grid">
             <div>
-              <span class="badge badge-soon">In arrivo</span>
-              <h3>MedTech Next 2027</h3>
+              <span class="badge badge-soon mono">In arrivo</span>
+              <h3 class="edition-title">MEDTECH <span class="grad">NEXT</span> 2027</h3>
               <p>
                 Dopo la prima edizione, MedTech Next torna nel 2027. Stiamo definendo data,
                 location e programma: l'annuncio ufficiale arriverà a breve.
               </p>
-              <ul class="facts">
-                <li><strong>Data</strong> Da annunciare</li>
-                <li><strong>Luogo</strong> Da annunciare</li>
-                <li><strong>Call for speaker</strong> Presto aperta</li>
+              <ul class="facts mono">
+                <li><strong>Data</strong><span>Da annunciare</span></li>
+                <li><strong>Luogo</strong><span>Da annunciare</span></li>
+                <li><strong>Speaker</strong><span>Call presto aperta</span></li>
               </ul>
               <a href="#contatti" class="btn">Voglio essere avvisato</a>
             </div>
-            <div class="placeholder-visual" aria-hidden="true"><span>2027</span></div>
+            <div class="teaser" aria-hidden="true">
+              <canvas class="network network-small"></canvas>
+              <span>2027</span>
+            </div>
           </div>
         </div>
 
@@ -129,9 +154,9 @@
         <div role="tabpanel" id="panel-2026" aria-labelledby="tab-2026" class="tab-panel" hidden>
           <div class="edition-grid">
             <div>
-              <span class="badge">Prima edizione</span>
-              <h3>MedTech Next 2026</h3>
-              <p class="tagline">Progetti complessi, partner concreti</p>
+              <span class="badge mono">Prima edizione</span>
+              <h3 class="edition-title">MEDTECH <span class="grad">NEXT</span> 2026</h3>
+              <p class="tagline mono">Progetti complessi, partner concreti</p>
               <p>
                 L'11 giugno 2026 il PoliHub di Milano ha ospitato la prima edizione di MedTech Next:
                 un pomeriggio dedicato a chi guida progetti digitali complessi nei dispositivi medici,
@@ -139,46 +164,55 @@
                 guidata dal rischio, con le voci di Politecnico di Milano, Confindustria Dispositivi
                 Medici, BION Cluster Lombardo Scienze della Vita e aziende del settore.
               </p>
-              <ul class="facts">
-                <li><strong>Data</strong> Giovedì 11 giugno 2026, 15:00–18:00</li>
-                <li><strong>Luogo</strong> PoliHub Bovisa — Innovation Park &amp; Startup Accelerator, Via Giovanni Durando 39, Milano</li>
-                <li><strong>Patrocini</strong> BION Cluster Lombardo Scienze della Vita, Confindustria Dispositivi Medici, PoliHub</li>
+              <ul class="facts mono">
+                <li><strong>Data</strong><span>Giov 11/06/2026 · 15:00–18:00</span></li>
+                <li><strong>Luogo</strong><span>PoliHub Bovisa, Via Durando 39, 20158 Milano</span></li>
               </ul>
+              <div class="stats">
+                <div class="stat"><span class="stat-num">61</span><span class="stat-label mono">partecipanti</span></div>
+                <div class="stat"><span class="stat-num">8</span><span class="stat-label mono">speaker</span></div>
+                <div class="stat"><span class="stat-num">3</span><span class="stat-label mono">patrocini</span></div>
+              </div>
             </div>
-            <div class="stats">
-              <div class="stat"><span class="stat-num">61</span><span class="stat-label">partecipanti</span></div>
-              <div class="stat"><span class="stat-num">8</span><span class="stat-label">speaker</span></div>
-              <div class="stat"><span class="stat-num">3</span><span class="stat-label">patrocini</span></div>
-            </div>
+            <a class="poster" href="assets/img/2026/locandina.jpg" target="_blank" rel="noopener">
+              <img src="assets/img/2026/locandina.jpg" alt="Locandina MedTech Next 2026" width="1240" height="1748" loading="lazy">
+            </a>
           </div>
 
           <h4 class="subhead">Speaker</h4>
-          <!-- TODO: foto speaker in assets/img/speakers/ (ora iniziali) -->
+          <!-- Foto speaker: assets/img/speakers/<nome-cognome>.jpg (quadrata, ~400px). Se manca restano le iniziali. -->
           <div class="speakers">
-            <div class="speaker"><div class="avatar">GD</div><strong>Gabriele Dubini</strong><span>Professore, Politecnico di Milano</span></div>
-            <div class="speaker"><div class="avatar">SM</div><strong>Simone Manini</strong><span>D/Vision Lab</span></div>
-            <div class="speaker"><div class="avatar">AR</div><strong>Alessandro Rotilio</strong><span>Medical Device Industry Executive</span></div>
-            <div class="speaker"><div class="avatar">VG</div><strong>Valeria Glorioso</strong><span>Direttrice Centro Studi, Confindustria Dispositivi Medici</span></div>
-            <div class="speaker"><div class="avatar">PP</div><strong>Pasquale Pedicini</strong><span>Sales Manager, GMM Group</span></div>
-            <div class="speaker"><div class="avatar">SM</div><strong>Sofia Mosci</strong><span>Senior Manager, Camelot Biomedical Systems</span></div>
-            <div class="speaker"><div class="avatar">MC</div><strong>Marco Ciambrone</strong><span>CTO, NRG</span></div>
-            <div class="speaker"><div class="avatar">FL</div><strong>Felice Lopane</strong><span>Managing Director, BION Cluster Lombardo Scienze della Vita</span></div>
+            <div class="speaker"><div class="avatar">GD<img src="assets/img/speakers/gabriele-dubini.jpg" alt="" loading="lazy" onerror="this.remove()"></div><strong>Gabriele Dubini</strong><span>Professore, Politecnico di Milano</span></div>
+            <div class="speaker"><div class="avatar">SM<img src="assets/img/speakers/simone-manini.jpg" alt="" loading="lazy" onerror="this.remove()"></div><strong>Simone Manini</strong><span>Presidente, D/Vision Lab</span></div>
+            <div class="speaker"><div class="avatar">AR<img src="assets/img/speakers/alessandro-rotilio.jpg" alt="" loading="lazy" onerror="this.remove()"></div><strong>Alessandro Rotilio</strong><span>Medical Device Industry Executive</span></div>
+            <div class="speaker"><div class="avatar">VG<img src="assets/img/speakers/valeria-glorioso.jpg" alt="" loading="lazy" onerror="this.remove()"></div><strong>Valeria Glorioso</strong><span>Direttrice Centro Studi, Confindustria Dispositivi Medici</span></div>
+            <div class="speaker"><div class="avatar">PP<img src="assets/img/speakers/pasquale-pedicini.jpg" alt="" loading="lazy" onerror="this.remove()"></div><strong>Pasquale Pedicini</strong><span>Sales Manager, GMM Group</span></div>
+            <div class="speaker"><div class="avatar">SM<img src="assets/img/speakers/sofia-mosci.jpg" alt="" loading="lazy" onerror="this.remove()"></div><strong>Sofia Mosci</strong><span>Senior Manager, Camelot Biomedical Systems</span></div>
+            <div class="speaker"><div class="avatar">MC<img src="assets/img/speakers/marco-ciambrone.jpg" alt="" loading="lazy" onerror="this.remove()"></div><strong>Marco Ciambrone</strong><span>CTO, NRG</span></div>
+            <div class="speaker"><div class="avatar">FL<img src="assets/img/speakers/felice-lopane.jpg" alt="" loading="lazy" onerror="this.remove()"></div><strong>Felice Lopane</strong><span>Managing Director, BION Cluster Lombardo Scienze della Vita</span></div>
           </div>
 
           <h4 class="subhead">Programma</h4>
           <ol class="agenda">
-            <li><time>15:00</time><span><strong>Dalla visione alla collaborazione: il contesto strategico di MedTech Next 2026</strong><small>Gabriele Dubini — Politecnico di Milano</small></span></li>
-            <li><time>15:20</time><span><strong>Dalla macchina all'AI: costruire (davvero) un flusso diagnostico integrato</strong><small>Simone Manini — D/Vision Lab</small><p class="abstract">Un progetto nato dalla collaborazione tra tre aziende con competenze trasversali: imaging, intelligenza artificiale e dispositivi medicali. L'obiettivo: portare la diagnostica AI nel flusso clinico reale, superando silos tecnologici, sfide di integrazione e vincoli di usabilità. Il risultato? Una soluzione concreta, scalabile e già operativa.</p></span></li>
-            <li><time>15:40</time><span><strong>Q&amp;A con il pubblico</strong></span></li>
-            <li><time>15:50</time><span><strong>Dall'innovazione locale al mercato globale: lezioni dall'industria medtech</strong><small>Alessandro Rotilio — Medical Device Industry Executive</small></span></li>
-            <li><time>16:10</time><span><strong>Oltre la tecnologia: cosa ci dicono i dati del MedTech in Italia</strong><small>Valeria Glorioso — Centro Studi Confindustria Dispositivi Medici</small></span></li>
-            <li><time>16:30</time><span><strong>Quando l'AI diventa sistema e trasforma sviluppo, integrazione e flusso clinico</strong><small>Pasquale Pedicini — GMM Group</small></span></li>
-            <li><time>16:45</time><span><strong>AI e modelli d'innovazione nel medtech: visione e strategia per crescere</strong><small>Sofia Mosci — Camelot Biomedical Systems</small></span></li>
-            <li><time>17:10</time><span><strong>Re-ingegnerizzazione guidata dal rischio per dispositivi medici</strong><small>Marco Ciambrone — NRG</small><p class="abstract">Nel MedTech la sfida non è più solo progettare nuovi prodotti, ma mantenere vivi quelli esistenti in un contesto di continua evoluzione normativa, tecnologica e di cybersecurity. Un approccio di re-ingegnerizzazione del software guidata dal rischio, nato dall'esperienza diretta con manufacturer e partner industriali: analisi architetturale, gestione del debito tecnico e integrazione controllata di nuovi moduli, per trasformare la complessità in vantaggio competitivo.</p></span></li>
-            <li><time>17:30</time><span><strong>Q&amp;A con il pubblico</strong></span></li>
-            <li><time>17:45</time><span><strong>Il Cluster come piattaforma di partnership per l'innovazione Life Science</strong><small>Felice Lopane — BION Cluster Lombardo Scienze della Vita</small></span></li>
-            <li><time>18:00</time><span><strong>Networking</strong></span></li>
+            <li><time class="mono">15:00</time><span><strong>Dalla visione alla collaborazione: il contesto strategico di MedTech Next 2026</strong><small class="mono">Gabriele Dubini — Politecnico di Milano</small></span></li>
+            <li><time class="mono">15:20</time><span><strong>Dalla macchina all'AI: costruire (davvero) un flusso diagnostico integrato</strong><small class="mono">Simone Manini — D/Vision Lab</small><p class="abstract">Un progetto nato dalla collaborazione tra tre aziende con competenze trasversali: imaging, intelligenza artificiale e dispositivi medicali. L'obiettivo: portare la diagnostica AI nel flusso clinico reale, superando silos tecnologici, sfide di integrazione e vincoli di usabilità. Il risultato? Una soluzione concreta, scalabile e già operativa.</p></span></li>
+            <li><time class="mono">15:40</time><span><strong>Q&amp;A con il pubblico</strong></span></li>
+            <li><time class="mono">15:50</time><span><strong>Dall'innovazione locale al mercato globale: lezioni dall'industria medtech</strong><small class="mono">Alessandro Rotilio — Medical Device Industry Executive</small></span></li>
+            <li><time class="mono">16:10</time><span><strong>Oltre la tecnologia: cosa ci dicono i dati del MedTech in Italia</strong><small class="mono">Valeria Glorioso — Centro Studi Confindustria Dispositivi Medici</small></span></li>
+            <li><time class="mono">16:30</time><span><strong>Quando l'AI diventa sistema e trasforma sviluppo, integrazione e flusso clinico</strong><small class="mono">Pasquale Pedicini — GMM Group</small></span></li>
+            <li><time class="mono">16:45</time><span><strong>AI e modelli d'innovazione nel medtech: visione e strategia per crescere</strong><small class="mono">Sofia Mosci — Camelot Biomedical Systems</small></span></li>
+            <li><time class="mono">17:10</time><span><strong>Re-ingegnerizzazione guidata dal rischio per dispositivi medici</strong><small class="mono">Marco Ciambrone — NRG</small><p class="abstract">Nel MedTech la sfida non è più solo progettare nuovi prodotti, ma mantenere vivi quelli esistenti in un contesto di continua evoluzione normativa, tecnologica e di cybersecurity. Un approccio di re-ingegnerizzazione del software guidata dal rischio, nato dall'esperienza diretta con manufacturer e partner industriali: analisi architetturale, gestione del debito tecnico e integrazione controllata di nuovi moduli, per trasformare la complessità in vantaggio competitivo.</p></span></li>
+            <li><time class="mono">17:30</time><span><strong>Q&amp;A con il pubblico</strong></span></li>
+            <li><time class="mono">17:45</time><span><strong>Il Cluster come piattaforma di partnership per l'innovazione Life Science</strong><small class="mono">Felice Lopane — BION Cluster Lombardo Scienze della Vita</small></span></li>
+            <li><time class="mono">18:00</time><span><strong>Networking</strong></span></li>
           </ol>
+
+          <h4 class="subhead">Con il patrocinio di</h4>
+          <div class="logos">
+            <img src="assets/img/loghi/confindustria-dm.png" alt="Confindustria Dispositivi Medici" width="148" height="100" loading="lazy">
+            <img src="assets/img/loghi/cluster-lombardo.png" alt="Cluster lombardo scienze della vita" width="148" height="108" loading="lazy">
+            <img src="assets/img/loghi/polihub.png" alt="PoliHub — Innovation Park &amp; Startup Accelerator" width="152" height="104" loading="lazy">
+          </div>
 
           <h4 class="subhead">Gallery</h4>
           <!-- TODO: foto evento in assets/img/2026/ -->
@@ -193,7 +227,8 @@
     <!-- ===================== SPONSOR ===================== -->
     <section id="sponsor" class="section">
       <div class="container">
-        <h2>Diventa sponsor</h2>
+        <p class="mono kicker">// Sponsor</p>
+        <h2>Diventa <span class="grad">sponsor</span></h2>
         <p class="section-lead">
           Sostieni MedTech Next 2027 e fatti conoscere da chi prende decisioni tecniche
           e di business nel settore medicale.
@@ -202,6 +237,7 @@
         <!-- TODO: definire pacchetti, benefit e prezzi -->
         <div class="cards cards-3 tiers">
           <article class="card tier">
+            <p class="mono card-tag">Tier 01</p>
             <h3>Supporter</h3>
             <ul>
               <li>Logo sul sito</li>
@@ -210,7 +246,7 @@
             </ul>
           </article>
           <article class="card tier tier-featured">
-            <span class="badge">Visibilità</span>
+            <p class="mono card-tag">Tier 02</p>
             <h3>Partner</h3>
             <ul>
               <li>Tutto di Supporter</li>
@@ -220,6 +256,7 @@
             </ul>
           </article>
           <article class="card tier">
+            <p class="mono card-tag">Tier 03</p>
             <h3>Main sponsor</h3>
             <ul>
               <li>Tutto di Partner</li>
@@ -229,34 +266,27 @@
             </ul>
           </article>
         </div>
-        <p class="center">
+        <p class="center cta-row">
           <a class="btn" href="mailto:info@dvisionlab.com?subject=Sponsorship%20MedTech%20Next%202027">Richiedi il media kit</a>
         </p>
-
-        <h4 class="subhead center">Con il patrocinio di (edizione 2026)</h4>
-        <!-- TODO: sostituire con i loghi in assets/img/patrocini/ -->
-        <div class="logos logos-3">
-          <div class="logo-ph">BION Cluster Lombardo<br>Scienze della Vita</div>
-          <div class="logo-ph">Confindustria<br>Dispositivi Medici</div>
-          <div class="logo-ph">PoliHub</div>
-        </div>
       </div>
     </section>
 
     <!-- ===================== ORGANIZZATORI ===================== -->
     <section id="organizzatori" class="section section-alt">
       <div class="container">
+        <p class="mono kicker">// Partner organizzatori</p>
         <h2>Organizzatori</h2>
         <div class="cards cards-2">
           <article class="card org">
-            <h3>D/Vision Lab</h3>
-            <p><!-- TODO: descrizione -->Software house specializzata in imaging medicale, visualizzazione e soluzioni software per il settore medtech.</p>
-            <a href="https://www.dvisionlab.com" target="_blank" rel="noopener">dvisionlab.com →</a>
+            <img src="assets/img/loghi/dvisionlab.png" alt="D/Vision Lab" width="556" height="389" loading="lazy">
+            <p>Software house specializzata in imaging medicale, visualizzazione e soluzioni software per il settore medtech.</p>
+            <a class="mono" href="https://www.dvisionlab.it" target="_blank" rel="noopener">dvisionlab.it →</a>
           </article>
           <article class="card org">
-            <h3>NRG</h3>
+            <img src="assets/img/loghi/nrg.png" alt="NRG" width="800" height="326" loading="lazy">
             <p>MedTech Engineering Partner: ingegneria per lo sviluppo di dispositivi e software medicali.</p>
-            <a href="https://www.nrgsys.it/" target="_blank" rel="noopener">nrgsys.it →</a>
+            <a class="mono" href="https://www.nrgsys.it/" target="_blank" rel="noopener">nrgsys.it →</a>
           </article>
         </div>
       </div>
@@ -264,22 +294,22 @@
 
     <!-- ===================== CONTATTI ===================== -->
     <section id="contatti" class="section cta-section">
+      <canvas class="network" aria-hidden="true"></canvas>
       <div class="container narrow center">
+        <p class="mono kicker">// Contatti</p>
         <h2>Non perdere l'annuncio</h2>
         <p class="section-lead">
           Scrivici per ricevere per primo data e programma di MedTech Next 2027,
           per proporti come speaker o per parlare di sponsorship.
         </p>
-        <!-- TODO: sostituire con un form (es. newsletter / Google Form / Formspree) -->
-        <a class="btn btn-light" href="mailto:info@dvisionlab.com?subject=MedTech%20Next%202027">Scrivici</a>
+        <a class="btn btn-light" href="mailto:info@dvisionlab.com?subject=MedTech%20Next%202027">info@dvisionlab.com</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="container footer-inner mono">
       <span>© <span id="year"></span> MedTech Next · D/Vision Lab &amp; NRG</span>
-      <!-- TODO: link privacy, LinkedIn -->
       <span><a href="#top">Torna su ↑</a></span>
     </div>
   </footer>
