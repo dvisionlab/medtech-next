@@ -126,7 +126,20 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
 .speakers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .speaker { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .speaker span { color: var(--muted); font-size: .9rem; }
-.avatar { width: 110px; height: 110px; border-radius: 50%; background: var(--border); margin-bottom: .8rem; }
+.avatar {
+  width: 110px; height: 110px; border-radius: 50%; margin-bottom: .8rem;
+  display: grid; place-items: center; font-weight: 800; font-size: 1.6rem; color: #fff;
+  background: linear-gradient(135deg, var(--navy-2), var(--accent));
+}
+.agenda small { display: block; color: var(--muted); font-size: .9rem; margin-top: .15rem; }
+.agenda .abstract { color: var(--muted); font-size: .9rem; margin: .5rem 0 0; max-width: 760px; }
+.tagline { font-weight: 600; color: var(--accent-dark); margin-top: -.3rem; }
+.checklist { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 28px; }
+.checklist li { position: relative; padding-left: 1.8rem; }
+.checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+@media (max-width: 720px) { .checklist { grid-template-columns: 1fr; } }
+.logos-3 { grid-template-columns: repeat(3, 1fr); }
+.logo-ph { text-align: center; line-height: 1.3; padding: 0 10px; }
 
 .agenda { list-style: none; padding: 0; margin: 0; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); }
 .agenda li { display: flex; gap: 1.5rem; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); }
