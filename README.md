@@ -35,6 +35,6 @@ In `index.html`, nella sezione `#edizioni`:
 
 ## Pubblicazione (GitHub Pages)
 
-1. **Settings → Pages**: Source = *Deploy from a branch*, branch `main`, cartella `/ (root)`.
+1. **Settings → Pages**: Source = *Deploy from a branch*, branch `master`, cartella `/ (root)`.
 2. **DNS** (zona `dvisionlab.com`): record `CNAME` `medtechnext-conf` → `dvisionlab.github.io`.
 3. Quando il certificato è pronto, in Settings → Pages attiva **Enforce HTTPS**.
