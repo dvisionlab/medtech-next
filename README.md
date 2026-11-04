@@ -19,6 +19,15 @@ I contenuti da completare sono marcati con `TODO` nell'HTML:
 grep -n TODO index.html
 ```
 
+## SEO
+
+- `<title>`, meta description, canonical, Open Graph e Twitter card in `index.html`.
+- Dati strutturati JSON-LD (schema.org: `WebSite`, `Organization`, `EventSeries`, `Event` per ogni edizione).
+  Quando si annuncia il 2027 aggiungere un nuovo `Event` con data e luogo nel blocco `application/ld+json`.
+- `robots.txt` e `sitemap.xml` (aggiornare `lastmod` quando cambiano i contenuti).
+- Immagine social `assets/img/og-image.jpg` (1200×630) e favicon (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`).
+- Dopo la pubblicazione: registrare il sito su Google Search Console e inviare la sitemap.
+
 ## Sviluppo locale
 
 ```bash
