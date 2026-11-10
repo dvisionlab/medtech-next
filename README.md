@@ -6,7 +6,10 @@ Pubblicato su GitHub Pages: https://medtechnext-conf.dvisionlab.com
 ## Struttura
 
 ```
-index.html            # pagina unica: hero, cos'è, edizioni (tab), sponsor, organizzatori, contatti
+src/index.html        # SORGENTE: template unico con testi IT/EN affiancati  ← si modifica questo
+build.py              # genera index.html (IT), en/index.html (EN) e sitemap.xml dal template
+index.html            # GENERATO (italiano)
+en/index.html         # GENERATO (inglese)
 assets/css/style.css  # stili
 assets/js/main.js     # menu mobile + tab delle edizioni (link diretto: #edizione-2026)
 assets/img/           # immagini (speaker, gallery, loghi sponsor, og-image)
@@ -19,19 +22,37 @@ I contenuti da completare sono marcati con `TODO` nell'HTML:
 grep -n TODO index.html
 ```
 
+## Lingue (IT / EN)
+
+Si scrive tutto in `src/index.html`, con i due testi affiancati:
+
+```
+{{it}}Testo in italiano{{en}}Text in English{{/}}
+```
+
+Poi si rigenerano le pagine e si committa il risultato (il controllo in CI fallisce se i file generati non sono aggiornati):
+
+```bash
+python3 build.py
+```
+
+- `/` è in italiano, `/en/` in inglese, collegate con `hreflang` (importante per Google).
+- Alla prima visita della home un browser non italiano viene portato su `/en/`; la scelta fatta con il selettore IT/EN viene ricordata. I crawler non vengono reindirizzati.
+- Immagini social: `assets/img/og-image.jpg` (IT) e `og-image-en.jpg` (EN).
+
 ## SEO
 
 - `<title>`, meta description, canonical, Open Graph e Twitter card in `index.html`.
-- Dati strutturati JSON-LD (schema.org: `WebSite`, `Organization`, `EventSeries`, `Event` per ogni edizione).
-  Quando si annuncia il 2027 aggiungere un nuovo `Event` con data e luogo nel blocco `application/ld+json`.
-- `robots.txt` e `sitemap.xml` (aggiornare `lastmod` quando cambiano i contenuti).
+- Dati strutturati JSON-LD (schema.org: `WebSite`, `Organization`, `EventSeries`, `Event` per ogni edizione), generati da `build.py`.
+  Quando si annuncia il 2027 aggiungere un nuovo `Event` con data e luogo in `jsonld()` dentro `build.py`.
+- `robots.txt` e `sitemap.xml` (quest'ultima generata da `build.py`, con le alternative `hreflang`).
 - Immagine social `assets/img/og-image.jpg` (1200×630) e favicon (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`).
 - Dopo la pubblicazione: registrare il sito su Google Search Console e inviare la sitemap.
 
 ## Sviluppo locale
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000   # i percorsi sono assoluti: servire dalla radice del repo
 ```
 
 Poi apri http://localhost:8000

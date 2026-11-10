@@ -158,3 +158,9 @@ if (lb && shots.length && typeof lb.showModal === 'function') {
     x0 = null;
   });
 }
+
+// Selettore lingua: ricorda la scelta (usata dallo script in <head>) e mantiene la sezione corrente
+document.querySelectorAll('[data-set-lang]').forEach(a => a.addEventListener('click', () => {
+  try { localStorage.setItem('mtn-lang', a.dataset.setLang); } catch (e) {}
+  if (location.hash) a.setAttribute('href', a.getAttribute('href').split('#')[0] + location.hash);
+}));
