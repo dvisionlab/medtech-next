@@ -1,31 +1,49 @@
 <!doctype html>
+<!-- Generato da src/index.html con build.py: non modificare a mano -->
 <html lang="it">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Lingua: alla prima visita della home segue il browser; la scelta manuale (IT/EN) viene ricordata. */
+    (function () {
+      try {
+        if (/bot|crawl|spider|slurp|lighthouse|preview/i.test(navigator.userAgent)) return;
+        var cur = 'it', pref = localStorage.getItem('mtn-lang');
+        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        var want = pref || (/^it\b/i.test(nav) ? 'it' : 'en');
+        if (!pref && cur === 'en') return;
+        if (want !== cur) location.replace((want === 'it' ? '/' : '/en/') + location.hash);
+      } catch (e) {}
+    })();
+  </script>
   <title>MedTech Next | Tech conference su AI e software nel medtech</title>
-  <meta name="description" content="Tech conference di D/Vision Lab e NRG per CTO e R&amp;D del medtech: AI nei flussi diagnostici, software per dispositivi medici e partnership. Torna nel 2027.">
+  <meta name="description" content="Tech conference di D/Vision Lab e NRG per CTO e R&amp;D del medtech: cosa serve oggi per costruire un prodotto medicale. Dopo Milano 2026, torna nel 2027.">
   <link rel="canonical" href="https://medtechnext-conf.dvisionlab.com/">
+  <link rel="alternate" hreflang="it" href="https://medtechnext-conf.dvisionlab.com/">
+  <link rel="alternate" hreflang="en" href="https://medtechnext-conf.dvisionlab.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://medtechnext-conf.dvisionlab.com/">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="D/Vision Lab &amp; NRG">
   <meta name="theme-color" content="#0b1622">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MedTech Next">
   <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://medtechnext-conf.dvisionlab.com/">
-  <meta property="og:title" content="MedTech Next 2027 — Tech conference per il futuro del medtech">
-  <meta property="og:description" content="Due aziende, una visione condivisa per il futuro del medtech. La tech conference di D/Vision Lab e NRG torna nel 2027: annuncio in arrivo.">
+  <meta property="og:title" content="MedTech Next 2027 — Cosa serve oggi per costruire un prodotto medicale?">
+  <meta property="og:description" content="Due aziende, una visione condivisa per il futuro del medtech. La tech conference di D/Vision Lab e NRG torna nel 2027.">
   <meta property="og:image" content="https://medtechnext-conf.dvisionlab.com/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="MedTech Next 2027 — Tech conference di D/Vision Lab e NRG">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MedTech Next 2027 — Tech conference per il futuro del medtech">
-  <meta name="twitter:description" content="La tech conference di D/Vision Lab e NRG su AI e software per dispositivi medici torna nel 2027.">
+  <meta name="twitter:description" content="What does it take to build a medical product today? La tech conference di D/Vision Lab e NRG torna nel 2027.">
   <meta name="twitter:image" content="https://medtechnext-conf.dvisionlab.com/assets/img/og-image.jpg">
 
   <script type="application/ld+json">
@@ -37,7 +55,10 @@
       "@id": "https://medtechnext-conf.dvisionlab.com/#website",
       "url": "https://medtechnext-conf.dvisionlab.com/",
       "name": "MedTech Next",
-      "inLanguage": "it-IT",
+      "inLanguage": [
+        "it-IT",
+        "en-US"
+      ],
       "publisher": [
         {
           "@id": "https://medtechnext-conf.dvisionlab.com/#dvisionlab"
@@ -218,7 +239,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="assets/css/style.css?v=20261105">
+  <link rel="stylesheet" href="/assets/css/style.css?v=35c4df0b">
 </head>
 <body>
 
@@ -234,6 +255,9 @@
         <a href="#edizioni">Edizioni</a>
         <a href="#sponsor">Sponsor</a>
         <a href="#organizzatori">Organizzatori</a>
+        <span class="lang-switch mono" aria-label="Lingua">
+          <span aria-current="true">IT</span><a href="/en/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a>
+        </span>
         <a href="#contatti" class="btn btn-small">Resta aggiornato</a>
       </nav>
     </div>
@@ -249,8 +273,8 @@
       <div class="hero-r side-block">
         <p class="mono side-label">Partner organizzatori</p>
         <div class="side-logos">
-          <img src="assets/img/loghi/nrg.png" alt="NRG — Your Partner in Custom Software" width="800" height="326">
-          <img src="assets/img/loghi/dvisionlab.png" alt="D/Vision Lab" width="556" height="389">
+          <img src="/assets/img/loghi/nrg.png" alt="NRG — Your Partner in Custom Software" width="800" height="326">
+          <img src="/assets/img/loghi/dvisionlab.png" alt="D/Vision Lab" width="556" height="389">
         </div>
       </div>
 
@@ -264,7 +288,7 @@
           Seconda edizione: data e location in arrivo
         </div>
         <div class="hero-cta">
-          <a href="#contatti" class="btn">Avvisami per il 2027</a>
+          <a href="#edizione-2027" class="btn" data-tab-link="2027">Scopri il 2027</a>
           <a href="#edizione-2026" class="btn btn-ghost" data-tab-link="2026">Rivivi il 2026</a>
         </div>
       </div>
@@ -334,23 +358,71 @@
         <div role="tabpanel" id="panel-2027" aria-labelledby="tab-2027" class="tab-panel">
           <div class="edition-grid">
             <div>
-              <span class="badge badge-soon mono">In arrivo</span>
+              <span class="badge badge-soon mono">Verso il 2027</span>
               <h3 class="edition-title">MEDTECH <span class="grad">NEXT</span> 2027</h3>
+              <p class="big-question" lang="en">What does it take to build a medical product today?</p>
+              <p class="big-question-sub mono">Cosa serve, oggi, per costruire un prodotto medicale?</p>
               <p>
-                Dopo la prima edizione, MedTech Next torna nel 2027. Stiamo definendo data,
-                location e programma: l'annuncio ufficiale arriverà a breve.
+                La prima edizione ha messo sul tavolo AI, imaging, architettura, interoperabilità, ricerca,
+                industria ed ecosistemi. Nel 2027 facciamo un passo avanti: non una singola tecnologia, ma il
+                percorso che porta un'idea o una tecnologia promettente a diventare un
+                <strong>prodotto medicale utilizzabile, validabile, industrializzabile e sostenibile nel tempo</strong>.
               </p>
               <ul class="facts mono">
                 <li><strong>Data</strong><span>Da annunciare</span></li>
                 <li><strong>Luogo</strong><span>Da annunciare</span></li>
-                <li><strong>Speaker</strong><span>Call presto aperta</span></li>
+                <li><strong>Speaker</strong><span>Call aperta</span></li>
               </ul>
-              <a href="#contatti" class="btn">Voglio essere avvisato</a>
+              <div class="hero-cta">
+                <a href="#call-2027" class="btn">Proponi un caso</a>
+                <a href="#contatti" class="btn btn-ghost">Avvisami</a>
+              </div>
             </div>
             <div class="teaser" aria-hidden="true">
               <canvas class="network network-small"></canvas>
               <span>2027</span>
             </div>
+          </div>
+
+          <h4 class="subhead">Il percorso <span class="wip mono">work in progress</span></h4>
+          <p class="path-intro">Tre tappe per raccontare come un'innovazione diventa un dispositivo reale. Temi e programma sono in definizione.</p>
+          <ol class="path">
+            <li class="path-step">
+              <span class="path-num mono">01</span>
+              <h5 lang="en">BUILD IT</h5>
+              <p class="path-sub mono">Tecnologia e progettazione</p>
+              <p>Architettura, software, hardware/embedded, AI, dati, interoperabilità, UX e Human Factors. Non <em>quali tecnologie sono nuove</em>, ma quali scelte rendono un prodotto solido fin dall'inizio.</p>
+            </li>
+            <li class="path-step">
+              <span class="path-num mono">02</span>
+              <h5 lang="en">MAKE IT REAL</h5>
+              <p class="path-sub mono">Dalla tecnologia al prodotto</p>
+              <p>Validazione clinica, regulatory, cybersecurity, usability, industrializzazione e qualità: il passaggio dal prototipo al dispositivo reale.</p>
+            </li>
+            <li class="path-step">
+              <span class="path-num mono">03</span>
+              <h5 lang="en">MAKE IT LAST</h5>
+              <p class="path-sub mono">Crescita e sostenibilità</p>
+              <p>Lifecycle, scalabilità, evoluzione normativa e tecnologica, supply chain, business model, investimenti, partnership e accesso al mercato.</p>
+            </li>
+          </ol>
+
+          <div class="call" id="call-2027">
+            <div>
+              <p class="mono kicker">// Call for speakers &amp; case studies</p>
+              <h4>Hai un caso concreto da raccontare?</h4>
+              <p>Partiamo dalle domande, poi cerchiamo chi ha davvero qualcosa da raccontare: storie vere di prodotti medicali, riusciti o meno, più che presentazioni commerciali. Cerchiamo in particolare:</p>
+              <ul class="tags mono">
+                <li>Manufacturer</li>
+                <li>Clinici</li>
+                <li>Ricerca</li>
+                <li>Regulatory &amp; Quality</li>
+                <li>Tecnologia</li>
+                <li>Business &amp; investimenti</li>
+                <li>Ecosistema</li>
+              </ul>
+            </div>
+            <a class="btn btn-light" href="mailto:info@dvisionlab.com?subject=Proposta%20speaker%20%2F%20case%20study%20-%20MedTech%20Next%202027&amp;body=Nome%20e%20ruolo%3A%0AAzienda%20%2F%20ente%3A%0ATappa%20(Build%20it%20%2F%20Make%20it%20real%20%2F%20Make%20it%20last)%3A%0AIl%20caso%20in%20poche%20righe%3A%0A">Proponi il tuo caso</a>
           </div>
         </div>
 
@@ -371,6 +443,7 @@
               <ul class="facts mono">
                 <li><strong>Data</strong><span>Giov 11/06/2026 · 15:00–18:00</span></li>
                 <li><strong>Luogo</strong><span>PoliHub Bovisa, Via Durando 39, 20158 Milano</span></li>
+                
               </ul>
               <div class="stats">
                 <div class="stat"><span class="stat-num">61</span><span class="stat-label mono">partecipanti</span></div>
@@ -378,25 +451,26 @@
                 <div class="stat"><span class="stat-num">3</span><span class="stat-label mono">patrocini</span></div>
               </div>
             </div>
-            <a class="poster" href="assets/img/2026/locandina.jpg" target="_blank" rel="noopener">
-              <img src="assets/img/2026/locandina-800.webp" alt="Locandina MedTech Next 2026: giovedì 11 giugno, PoliHub Bovisa, Milano, 15:00–18:00" width="800" height="1128" loading="lazy">
+            <a class="poster" href="/assets/img/2026/locandina.jpg" target="_blank" rel="noopener">
+              <img src="/assets/img/2026/locandina-800.webp" alt="Locandina MedTech Next 2026: giovedì 11 giugno, PoliHub Bovisa, Milano, 15:00–18:00" width="800" height="1128" loading="lazy">
             </a>
           </div>
 
           <h4 class="subhead">Speaker</h4>
           <!-- Foto speaker: assets/img/speakers/<nome-cognome>.jpg (quadrata, ~400px). Se manca restano le iniziali. -->
           <div class="speakers">
-            <div class="speaker"><div class="avatar">GD<img src="assets/img/speakers/gabriele-dubini.jpg" alt="Gabriele Dubini" loading="lazy" onerror="this.remove()"></div><strong>Gabriele Dubini</strong><span>Professore, Politecnico di Milano</span></div>
-            <div class="speaker"><div class="avatar">SM<img src="assets/img/speakers/simone-manini.jpg" alt="Simone Manini" loading="lazy" onerror="this.remove()"></div><strong>Simone Manini</strong><span>Presidente, D/Vision Lab</span></div>
-            <div class="speaker"><div class="avatar">AR<img src="assets/img/speakers/alessandro-rotilio.jpg" alt="Alessandro Rotilio" loading="lazy" onerror="this.remove()"></div><strong>Alessandro Rotilio</strong><span>Medical Device Industry Executive</span></div>
-            <div class="speaker"><div class="avatar">VG<img src="assets/img/speakers/valeria-glorioso.jpg" alt="Valeria Glorioso" loading="lazy" onerror="this.remove()"></div><strong>Valeria Glorioso</strong><span>Direttrice Centro Studi, Confindustria Dispositivi Medici</span></div>
-            <div class="speaker"><div class="avatar">PP<img src="assets/img/speakers/pasquale-pedicini.jpg" alt="Pasquale Pedicini" loading="lazy" onerror="this.remove()"></div><strong>Pasquale Pedicini</strong><span>Sales Manager, GMM Group</span></div>
-            <div class="speaker"><div class="avatar">SM<img src="assets/img/speakers/sofia-mosci.jpg" alt="Sofia Mosci" loading="lazy" onerror="this.remove()"></div><strong>Sofia Mosci</strong><span>Senior Manager, Camelot Biomedical Systems</span></div>
-            <div class="speaker"><div class="avatar">MC<img src="assets/img/speakers/marco-ciambrone.jpg" alt="Marco Ciambrone" loading="lazy" onerror="this.remove()"></div><strong>Marco Ciambrone</strong><span>CTO, NRG</span></div>
-            <div class="speaker"><div class="avatar">FL<img src="assets/img/speakers/felice-lopane.jpg" alt="Felice Lopane" loading="lazy" onerror="this.remove()"></div><strong>Felice Lopane</strong><span>Managing Director, BION Cluster Lombardo Scienze della Vita</span></div>
+            <div class="speaker"><div class="avatar">GD<img src="/assets/img/speakers/gabriele-dubini.jpg" alt="Gabriele Dubini" loading="lazy" onerror="this.remove()"></div><strong>Gabriele Dubini</strong><span>Professore, Politecnico di Milano</span></div>
+            <div class="speaker"><div class="avatar">SM<img src="/assets/img/speakers/simone-manini.jpg" alt="Simone Manini" loading="lazy" onerror="this.remove()"></div><strong>Simone Manini</strong><span>Presidente, D/Vision Lab</span></div>
+            <div class="speaker"><div class="avatar">AR<img src="/assets/img/speakers/alessandro-rotilio.jpg" alt="Alessandro Rotilio" loading="lazy" onerror="this.remove()"></div><strong>Alessandro Rotilio</strong><span>Medical Device Industry Executive</span></div>
+            <div class="speaker"><div class="avatar">VG<img src="/assets/img/speakers/valeria-glorioso.jpg" alt="Valeria Glorioso" loading="lazy" onerror="this.remove()"></div><strong>Valeria Glorioso</strong><span>Direttrice Centro Studi, Confindustria Dispositivi Medici</span></div>
+            <div class="speaker"><div class="avatar">PP<img src="/assets/img/speakers/pasquale-pedicini.jpg" alt="Pasquale Pedicini" loading="lazy" onerror="this.remove()"></div><strong>Pasquale Pedicini</strong><span>Sales Manager, GMM Group</span></div>
+            <div class="speaker"><div class="avatar">SM<img src="/assets/img/speakers/sofia-mosci.jpg" alt="Sofia Mosci" loading="lazy" onerror="this.remove()"></div><strong>Sofia Mosci</strong><span>Senior Manager, Camelot Biomedical Systems</span></div>
+            <div class="speaker"><div class="avatar">MC<img src="/assets/img/speakers/marco-ciambrone.jpg" alt="Marco Ciambrone" loading="lazy" onerror="this.remove()"></div><strong>Marco Ciambrone</strong><span>CTO, NRG</span></div>
+            <div class="speaker"><div class="avatar">FL<img src="/assets/img/speakers/felice-lopane.jpg" alt="Felice Lopane" loading="lazy" onerror="this.remove()"></div><strong>Felice Lopane</strong><span>Managing Director, BION Cluster Lombardo Scienze della Vita</span></div>
           </div>
 
           <h4 class="subhead">Programma</h4>
+          
           <ol class="agenda">
             <li><time class="mono">15:00</time><span><strong>Dalla visione alla collaborazione: il contesto strategico di MedTech Next 2026</strong><small class="mono">Gabriele Dubini — Politecnico di Milano</small></span></li>
             <li><time class="mono">15:20</time><span><strong>Dalla macchina all'AI: costruire (davvero) un flusso diagnostico integrato</strong><small class="mono">Simone Manini — D/Vision Lab</small><p class="abstract">Un progetto nato dalla collaborazione tra tre aziende con competenze trasversali: imaging, intelligenza artificiale e dispositivi medicali. L'obiettivo: portare la diagnostica AI nel flusso clinico reale, superando silos tecnologici, sfide di integrazione e vincoli di usabilità. Il risultato? Una soluzione concreta, scalabile e già operativa.</p></span></li>
@@ -413,22 +487,22 @@
 
           <h4 class="subhead">Con il patrocinio di</h4>
           <div class="logos">
-            <img src="assets/img/loghi/confindustria-dm.png" alt="Confindustria Dispositivi Medici" width="148" height="100" loading="lazy">
-            <img src="assets/img/loghi/cluster-lombardo.png" alt="Cluster lombardo scienze della vita" width="148" height="108" loading="lazy">
-            <img src="assets/img/loghi/polihub.png" alt="PoliHub — Innovation Park &amp; Startup Accelerator" width="152" height="104" loading="lazy">
+            <img src="/assets/img/loghi/confindustria-dm.png" alt="Confindustria Dispositivi Medici" width="148" height="100" loading="lazy">
+            <img src="/assets/img/loghi/cluster-lombardo.png" alt="Cluster lombardo scienze della vita" width="148" height="108" loading="lazy">
+            <img src="/assets/img/loghi/polihub.png" alt="PoliHub — Innovation Park &amp; Startup Accelerator" width="152" height="104" loading="lazy">
           </div>
 
           <h4 class="subhead">Gallery</h4>
           <div class="gallery">
-            <a href="assets/img/2026/gallery/gruppo.webp" target="_blank" rel="noopener" class="feature"><img src="assets/img/2026/gallery/gruppo-sm.webp" srcset="assets/img/2026/gallery/gruppo-sm.webp 700w, assets/img/2026/gallery/gruppo.webp 1600w" sizes="(max-width: 720px) 100vw, 760px" alt="Foto di gruppo di speaker e organizzatori di MedTech Next 2026 al PoliHub" width="700" height="467" loading="lazy"></a>
-            <a href="assets/img/2026/gallery/apertura.webp" target="_blank" rel="noopener"><img src="assets/img/2026/gallery/apertura-sm.webp" srcset="assets/img/2026/gallery/apertura-sm.webp 700w, assets/img/2026/gallery/apertura.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Lo schermo di apertura di MedTech Next 2026 in sala" width="700" height="467" loading="lazy"></a>
-            <a href="assets/img/2026/gallery/sala.webp" target="_blank" rel="noopener"><img src="assets/img/2026/gallery/sala-sm.webp" srcset="assets/img/2026/gallery/sala-sm.webp 700w, assets/img/2026/gallery/sala.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="La sala del PoliHub Bovisa piena durante MedTech Next 2026" width="700" height="467" loading="lazy"></a>
-            <a href="assets/img/2026/gallery/talk-dvisionlab.webp" target="_blank" rel="noopener"><img src="assets/img/2026/gallery/talk-dvisionlab-sm.webp" srcset="assets/img/2026/gallery/talk-dvisionlab-sm.webp 700w, assets/img/2026/gallery/talk-dvisionlab.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Il talk di D/Vision Lab sul flusso diagnostico integrato con AI" width="700" height="467" loading="lazy"></a>
-            <a href="assets/img/2026/gallery/speaker-1.webp" target="_blank" rel="noopener"><img src="assets/img/2026/gallery/speaker-1-sm.webp" srcset="assets/img/2026/gallery/speaker-1-sm.webp 700w, assets/img/2026/gallery/speaker-1.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Uno speaker durante il suo intervento a MedTech Next 2026" width="700" height="467" loading="lazy"></a>
-            <a href="assets/img/2026/gallery/speaker-2.webp" target="_blank" rel="noopener"><img src="assets/img/2026/gallery/speaker-2-sm.webp" srcset="assets/img/2026/gallery/speaker-2-sm.webp 700w, assets/img/2026/gallery/speaker-2.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Un intervento sul software medicale a MedTech Next 2026" width="700" height="467" loading="lazy"></a>
-            <a href="assets/img/2026/gallery/speaker-3.webp" target="_blank" rel="noopener"><img src="assets/img/2026/gallery/speaker-3-sm.webp" srcset="assets/img/2026/gallery/speaker-3-sm.webp 700w, assets/img/2026/gallery/speaker-3.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Uno speaker presenta un caso di studio a MedTech Next 2026" width="700" height="467" loading="lazy"></a>
-            <a href="assets/img/2026/gallery/pubblico.webp" target="_blank" rel="noopener"><img src="assets/img/2026/gallery/pubblico-sm.webp" srcset="assets/img/2026/gallery/pubblico-sm.webp 700w, assets/img/2026/gallery/pubblico.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Il pubblico di MedTech Next 2026 al PoliHub Bovisa" width="700" height="467" loading="lazy"></a>
-            <a href="assets/img/2026/gallery/polihub.webp" target="_blank" rel="noopener"><img src="assets/img/2026/gallery/polihub-sm.webp" srcset="assets/img/2026/gallery/polihub-sm.webp 700w, assets/img/2026/gallery/polihub.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Le vetrate del PoliHub Bovisa durante MedTech Next 2026" width="700" height="467" loading="lazy"></a>
+            <a href="/assets/img/2026/gallery/gruppo.webp" target="_blank" rel="noopener" class="feature"><img src="/assets/img/2026/gallery/gruppo-sm.webp" srcset="/assets/img/2026/gallery/gruppo-sm.webp 700w, /assets/img/2026/gallery/gruppo.webp 1600w" sizes="(max-width: 720px) 100vw, 760px" alt="Foto di gruppo di speaker e organizzatori di MedTech Next 2026 al PoliHub" width="700" height="467" loading="lazy"></a>
+            <a href="/assets/img/2026/gallery/apertura.webp" target="_blank" rel="noopener"><img src="/assets/img/2026/gallery/apertura-sm.webp" srcset="/assets/img/2026/gallery/apertura-sm.webp 700w, /assets/img/2026/gallery/apertura.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Lo schermo di apertura di MedTech Next 2026 in sala" width="700" height="467" loading="lazy"></a>
+            <a href="/assets/img/2026/gallery/sala.webp" target="_blank" rel="noopener"><img src="/assets/img/2026/gallery/sala-sm.webp" srcset="/assets/img/2026/gallery/sala-sm.webp 700w, /assets/img/2026/gallery/sala.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="La sala del PoliHub Bovisa piena durante MedTech Next 2026" width="700" height="467" loading="lazy"></a>
+            <a href="/assets/img/2026/gallery/talk-dvisionlab.webp" target="_blank" rel="noopener"><img src="/assets/img/2026/gallery/talk-dvisionlab-sm.webp" srcset="/assets/img/2026/gallery/talk-dvisionlab-sm.webp 700w, /assets/img/2026/gallery/talk-dvisionlab.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Il talk di D/Vision Lab sul flusso diagnostico integrato con AI" width="700" height="467" loading="lazy"></a>
+            <a href="/assets/img/2026/gallery/speaker-1.webp" target="_blank" rel="noopener"><img src="/assets/img/2026/gallery/speaker-1-sm.webp" srcset="/assets/img/2026/gallery/speaker-1-sm.webp 700w, /assets/img/2026/gallery/speaker-1.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Uno speaker durante il suo intervento a MedTech Next 2026" width="700" height="467" loading="lazy"></a>
+            <a href="/assets/img/2026/gallery/speaker-2.webp" target="_blank" rel="noopener"><img src="/assets/img/2026/gallery/speaker-2-sm.webp" srcset="/assets/img/2026/gallery/speaker-2-sm.webp 700w, /assets/img/2026/gallery/speaker-2.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Un intervento sul software medicale a MedTech Next 2026" width="700" height="467" loading="lazy"></a>
+            <a href="/assets/img/2026/gallery/speaker-3.webp" target="_blank" rel="noopener"><img src="/assets/img/2026/gallery/speaker-3-sm.webp" srcset="/assets/img/2026/gallery/speaker-3-sm.webp 700w, /assets/img/2026/gallery/speaker-3.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Uno speaker presenta un caso di studio a MedTech Next 2026" width="700" height="467" loading="lazy"></a>
+            <a href="/assets/img/2026/gallery/pubblico.webp" target="_blank" rel="noopener"><img src="/assets/img/2026/gallery/pubblico-sm.webp" srcset="/assets/img/2026/gallery/pubblico-sm.webp 700w, /assets/img/2026/gallery/pubblico.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Il pubblico di MedTech Next 2026 al PoliHub Bovisa" width="700" height="467" loading="lazy"></a>
+            <a href="/assets/img/2026/gallery/polihub.webp" target="_blank" rel="noopener"><img src="/assets/img/2026/gallery/polihub-sm.webp" srcset="/assets/img/2026/gallery/polihub-sm.webp 700w, /assets/img/2026/gallery/polihub.webp 1600w" sizes="(max-width: 720px) 50vw, 380px" alt="Le vetrate del PoliHub Bovisa durante MedTech Next 2026" width="700" height="467" loading="lazy"></a>
           </div>
           <p class="gallery-note mono">Foto: MedTech Next 2026, PoliHub Bovisa — Milano</p>
         </div>
@@ -490,12 +564,12 @@
         <h2>Organizzatori</h2>
         <div class="cards cards-2">
           <article class="card org">
-            <img src="assets/img/loghi/dvisionlab.png" alt="D/Vision Lab" width="556" height="389" loading="lazy">
+            <img src="/assets/img/loghi/dvisionlab.png" alt="D/Vision Lab" width="556" height="389" loading="lazy">
             <p>Software house specializzata in imaging medicale, visualizzazione e soluzioni software per il settore medtech.</p>
             <a class="mono" href="https://www.dvisionlab.it" target="_blank" rel="noopener">dvisionlab.it →</a>
           </article>
           <article class="card org">
-            <img src="assets/img/loghi/nrg.png" alt="NRG" width="800" height="326" loading="lazy">
+            <img src="/assets/img/loghi/nrg.png" alt="NRG" width="800" height="326" loading="lazy">
             <p>MedTech Engineering Partner: ingegneria per lo sviluppo di dispositivi e software medicali.</p>
             <a class="mono" href="https://www.nrgsys.it/" target="_blank" rel="noopener">nrgsys.it →</a>
           </article>
@@ -511,7 +585,7 @@
         <h2>Non perdere l'annuncio</h2>
         <p class="section-lead">
           Scrivici per ricevere per primo data e programma di MedTech Next 2027,
-          per proporti come speaker o per parlare di sponsorship.
+          per proporre un caso o un intervento, o per parlare di sponsorship.
         </p>
         <a class="btn btn-light" href="mailto:info@dvisionlab.com?subject=MedTech%20Next%202027">info@dvisionlab.com</a>
       </div>
@@ -531,10 +605,10 @@
   <footer class="site-footer">
     <div class="container footer-inner mono">
       <span>© <span id="year"></span> MedTech Next · D/Vision Lab &amp; NRG</span>
-      <span><a href="#top">Torna su ↑</a></span>
+      <span class="footer-links"><a href="/en/" hreflang="en" lang="en" data-set-lang="en">English</a> · <a href="#top">Torna su ↑</a></span>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20261105"></script>
+  <script src="/assets/js/main.js?v=35c4df0b"></script>
 </body>
 </html>
