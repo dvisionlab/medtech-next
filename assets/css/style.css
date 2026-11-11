@@ -58,6 +58,14 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); }
 .btn:hover { background: #2a86f0; border-color: #2a86f0; transform: translateY(-1px); }
 .btn-ghost { background: transparent; border-color: rgba(255,255,255,.55); }
 .btn-ghost:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+/* Nell'apertura, sotto i bottoni e la scritta passa la rete di puntini che segue il mouse:
+   uno sfondo scuro semi-trasparente con sfocatura tiene leggibile il testo */
+.hero .btn-ghost {
+  background: rgba(6, 32, 66, .8); border-color: rgba(255,255,255,.65);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.hero .btn-ghost:hover { background: rgba(26, 84, 146, .88); border-color: #fff; }
+.hero .announce { background: rgba(5, 25, 50, .72); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
 .btn-light { background: #fff; color: var(--ink); border-color: #fff; font-family: var(--mono); }
 .btn-light:hover { background: transparent; color: #fff; border-color: #fff; }
 .btn-small { padding: .45em 1em; font-size: .9rem; }
