@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://medtechnext-conf.dvisionlab.com/sitemap.xml
+Sitemap: https://medtechnext.it/sitemap.xml

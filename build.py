@@ -8,7 +8,7 @@ import hashlib, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-SITE = "https://medtechnext-conf.dvisionlab.com"
+SITE = "https://medtechnext.it"
 LANGS = {
     "it": dict(out="index.html", url=SITE + "/", ogLocale="it_IT", ogLocaleAlt="en_US", ogImage="og-image.jpg", inLang="it-IT"),
     "en": dict(out="en/index.html", url=SITE + "/en/", ogLocale="en_US", ogLocaleAlt="it_IT", ogImage="og-image-en.jpg", inLang="en-US"),
