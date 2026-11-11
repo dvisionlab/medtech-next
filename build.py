@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 SITE = "https://medtechnext.it"
+LASTMOD = "2026-11-11"   # aggiornare quando cambiano i contenuti (data della sitemap)
 LANGS = {
     "it": dict(out="index.html", url=SITE + "/", ogLocale="it_IT", ogLocaleAlt="en_US", ogImage="og-image.jpg", inLang="it-IT"),
     "en": dict(out="en/index.html", url=SITE + "/en/", ogLocale="en_US", ogLocaleAlt="it_IT", ogImage="og-image-en.jpg", inLang="en-US"),
@@ -69,9 +70,13 @@ def jsonld(lang):
         {"@type": "WebSite", "@id": f"{SITE}/#website", "url": SITE + "/", "name": "MedTech Next",
          "inLanguage": ["it-IT", "en-US"], "publisher": [ref("dvisionlab"), ref("nrg")]},
         {"@type": "Organization", "@id": f"{SITE}/#dvisionlab", "name": "D/Vision Lab",
-         "url": "https://www.dvisionlab.it", "logo": f"{SITE}/assets/img/loghi/dvisionlab.png"},
+         "url": "https://www.dvisionlab.it", "logo": f"{SITE}/assets/img/loghi/dvisionlab.png",
+         "sameAs": ["https://www.linkedin.com/company/dvisionlab"],
+         "contactPoint": {"@type": "ContactPoint", "email": "info@dvisionlab.com", "contactType": "customer service",
+                          "availableLanguage": ["it", "en"]}},
         {"@type": "Organization", "@id": f"{SITE}/#nrg", "name": "NRG",
-         "url": "https://www.nrgsys.it/", "logo": f"{SITE}/assets/img/loghi/nrg.png"},
+         "url": "https://www.nrgsys.it/", "logo": f"{SITE}/assets/img/loghi/nrg.png",
+         "sameAs": ["https://www.linkedin.com/company/nrgsys"]},
         {"@type": "EventSeries", "@id": f"{SITE}/#series", "name": "MedTech Next", "url": L["url"],
          "description": ("Tech conference di D/Vision Lab e NRG per chi guida progetti digitali complessi nei dispositivi medici."
                          if it else
@@ -135,7 +140,7 @@ def sitemap():
     imgs = "".join(f"    <image:image><image:loc>{SITE}/assets/img/{p}</image:loc></image:image>\n"
                    for p in ["og-image.jpg", "2026/gallery/gruppo.webp", "2026/gallery/sala.webp",
                              "2026/gallery/talk-dvisionlab.webp", "2026/gallery/apertura.webp", "2026/locandina.jpg"])
-    urls = "".join(f"  <url>\n    <loc>{u}</loc>\n{alts}{imgs}  </url>\n" for u in (SITE + "/", SITE + "/en/"))
+    urls = "".join(f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{LASTMOD}</lastmod>\n{alts}{imgs}  </url>\n" for u in (SITE + "/", SITE + "/en/"))
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
             'xmlns:xhtml="http://www.w3.org/1999/xhtml" '

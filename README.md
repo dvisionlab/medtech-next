@@ -40,14 +40,23 @@ python3 build.py
 - Alla prima visita della home un browser non italiano viene portato su `/en/`; la scelta fatta con il selettore IT/EN viene ricordata. I crawler non vengono reindirizzati.
 - Immagini social: `assets/img/og-image.jpg` (IT) e `og-image-en.jpg` (EN).
 
-## SEO
+## SEO e indicizzazione
 
-- `<title>`, meta description, canonical, Open Graph e Twitter card in `index.html`.
-- Dati strutturati JSON-LD (schema.org: `WebSite`, `Organization`, `EventSeries`, `Event` per ogni edizione), generati da `build.py`.
-  Quando si annuncia il 2027 aggiungere un nuovo `Event` con data e luogo in `jsonld()` dentro `build.py`.
-- `robots.txt` e `sitemap.xml` (quest'ultima generata da `build.py`, con le alternative `hreflang`).
-- Immagine social `assets/img/og-image.jpg` (1200×630) e favicon (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`).
-- Dopo la pubblicazione: registrare il sito su Google Search Console e inviare la sitemap.
+Già fatto nel sito:
+- `<title>`, meta description, canonical, `hreflang` IT/EN, Open Graph e Twitter card, per ogni lingua (generati da `build.py`).
+- Dati strutturati JSON-LD (schema.org: `WebSite`, `Organization` con `sameAs` e contatto, `EventSeries`, `Event` 2026) in `build.py`, funzione `jsonld()`.
+  Quando si annuncia il 2027, aggiungere lì un nuovo `Event` con data e luogo (Google richiede `startDate`).
+- `robots.txt`, `sitemap.xml` con alternative `hreflang`, immagini e `lastmod` (aggiornare `LASTMOD` in `build.py` quando cambiano i contenuti).
+- Immagini social `assets/img/og-image.jpg` (IT) e `og-image-en.jpg` (EN), 1200×630.
+- Icone: `favicon.ico`, `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `icon-192/512.png`, `site.webmanifest`.
+- Font ospitati sul sito (`assets/fonts/`): nessuna richiesta a Google, nessun cookie, nessuno spostamento del layout (CLS 0).
+- Pagina `404.html` bilingue con `noindex`.
+
+Da fare a mano dopo ogni cambio di dominio o di struttura:
+1. **Google Search Console**: proprietà di tipo *Dominio* (verifica con record `TXT` su Squarespace), invio di `sitemap.xml`, *Richiedi indicizzazione* di `/` e `/en/`.
+2. **Bing Webmaster Tools**: importare la proprietà da Search Console (alimenta anche DuckDuckGo e altri).
+3. Controllare l'anteprima dei link con il [Post Inspector di LinkedIn](https://www.linkedin.com/post-inspector/) dopo ogni cambio di immagine social.
+4. In *Settings → Pages* tenere attivo **Enforce HTTPS**.
 
 ## Sviluppo locale
 

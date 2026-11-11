@@ -17,8 +17,8 @@
       } catch (e) {}
     })();
   </script>
-  <title>MedTech Next | Tech conference su AI e software nel medtech</title>
-  <meta name="description" content="Tech conference di D/Vision Lab e NRG per CTO e R&amp;D del medtech: cosa serve oggi per costruire un prodotto medicale. Dopo Milano 2026, torna nel 2027.">
+  <title>MedTech Next — Conferenza medtech | Milano 2026, torna nel 2027</title>
+  <meta name="description" content="Conferenza medtech di D/Vision Lab e NRG per CTO e R&amp;D: prima edizione a Milano (giugno 2026), torna nel 2027. Cosa serve per costruire un prodotto medicale?">
   <link rel="canonical" href="https://medtechnext.it/">
   <link rel="alternate" hreflang="it" href="https://medtechnext.it/">
   <link rel="alternate" hreflang="en" href="https://medtechnext.it/en/">
@@ -26,9 +26,11 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="D/Vision Lab &amp; NRG">
   <meta name="theme-color" content="#0b1622">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MedTech Next">
@@ -38,6 +40,7 @@
   <meta property="og:title" content="MedTech Next 2027 — Cosa serve oggi per costruire un prodotto medicale?">
   <meta property="og:description" content="Due aziende, una visione condivisa per il futuro del medtech. La tech conference di D/Vision Lab e NRG torna nel 2027.">
   <meta property="og:image" content="https://medtechnext.it/assets/img/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="MedTech Next 2027 — Tech conference di D/Vision Lab e NRG">
@@ -45,6 +48,7 @@
   <meta name="twitter:title" content="MedTech Next 2027 — Tech conference per il futuro del medtech">
   <meta name="twitter:description" content="What does it take to build a medical product today? La tech conference di D/Vision Lab e NRG torna nel 2027.">
   <meta name="twitter:image" content="https://medtechnext.it/assets/img/og-image.jpg">
+  <meta name="twitter:image:alt" content="MedTech Next 2027 — Tech conference di D/Vision Lab e NRG">
 
   <script type="application/ld+json">
 {
@@ -73,14 +77,29 @@
       "@id": "https://medtechnext.it/#dvisionlab",
       "name": "D/Vision Lab",
       "url": "https://www.dvisionlab.it",
-      "logo": "https://medtechnext.it/assets/img/loghi/dvisionlab.png"
+      "logo": "https://medtechnext.it/assets/img/loghi/dvisionlab.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/dvisionlab"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@dvisionlab.com",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "it",
+          "en"
+        ]
+      }
     },
     {
       "@type": "Organization",
       "@id": "https://medtechnext.it/#nrg",
       "name": "NRG",
       "url": "https://www.nrgsys.it/",
-      "logo": "https://medtechnext.it/assets/img/loghi/nrg.png"
+      "logo": "https://medtechnext.it/assets/img/loghi/nrg.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/nrgsys"
+      ]
     },
     {
       "@type": "EventSeries",
@@ -234,12 +253,9 @@
 }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="/assets/css/style.css?v=275d5c55">
+  <link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/roboto-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=068e3966">
 </head>
 <body>
 
@@ -278,7 +294,7 @@
         </div>
       </div>
 
-      <h1 class="wordmark"><span class="hero-l">MEDTECH</span> <span class="hero-r grad">NEXT</span></h1>
+      <h1 class="wordmark"><span class="hero-l">MEDTECH</span> <span class="hero-r grad">NEXT</span><span class="sr-only"> — conferenza medtech di D/Vision Lab e NRG, Milano 2026, seconda edizione nel 2027</span></h1>
 
       <div class="hero-l hero-content">
         <p class="year">2027</p>
@@ -609,6 +625,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=275d5c55"></script>
+  <script src="/assets/js/main.js?v=068e3966"></script>
 </body>
 </html>
