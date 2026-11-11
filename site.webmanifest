@@ -1,0 +1,15 @@
+{
+  "name": "MedTech Next",
+  "short_name": "MedTech Next",
+  "description": "Tech conference di D/Vision Lab e NRG per il futuro del medtech.",
+  "lang": "it",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0b1622",
+  "theme_color": "#0b1622",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
