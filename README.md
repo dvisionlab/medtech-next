@@ -1,7 +1,7 @@
 # MedTech Next — sito della conferenza
 
 Sito statico (HTML + CSS + JS, nessuna build) della conferenza **MedTech Next**, organizzata da D/Vision Lab e NRG.
-Pubblicato su GitHub Pages: https://medtechnext-conf.dvisionlab.com
+Pubblicato su GitHub Pages: https://medtechnext.it
 
 ## Struttura
 
@@ -66,5 +66,5 @@ In `index.html`, nella sezione `#edizioni`:
 ## Pubblicazione (GitHub Pages)
 
 1. **Settings → Pages**: Source = **GitHub Actions**. Il workflow `.github/workflows/pages.yml` pubblica a ogni push su `master` (si può lanciare anche a mano da *Actions → Deploy GitHub Pages → Run workflow*).
-2. **DNS** (zona `dvisionlab.com`): record `CNAME` `medtechnext-conf` → `dvisionlab.github.io`.
+2. **Dominio** `medtechnext.it` (DNS su Squarespace): quattro record `A` su `@` (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`), quattro `AAAA` (`2606:50c0:8000::153` … `8003::153`) e un `CNAME` `www` → `dvisionlab.github.io`. In Settings → Pages il *Custom domain* è `medtechnext.it` (con il deploy da Actions il file `CNAME` non conta: il dominio si imposta da lì).
 3. Quando il certificato è pronto, in Settings → Pages attiva **Enforce HTTPS**.
